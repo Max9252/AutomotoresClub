@@ -183,254 +183,126 @@ $(document).ready(function () {
         }
     });
 
-  
-              $('#registroFormP').bootstrapValidator({
+    $('#registroFormP').bootstrapValidator({
 
-            message: 'This value is not valid',
-            excluded: [':disabled'],
+        message: 'This value is not valid',
+        excluded: [':disabled'],
 
-            fields: {
+        fields: {
 
-                nombreP: {
-                    validators: {
-                        notEmpty: {
-                            message: 'No puedes dejar este campo en blanco'
-                        },
-                        stringLength: {
-                            max: 50,
-                            message: 'Este campo no puede tener mas de 50 caracteres'
-                        }
+            nombreP: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
                     }
-                },
+                }
+            },
 
-                ciudadP: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Debe escoger una opción'
-                        }
+            ciudadP: {
+                validators: {
+                    notEmpty: {
+                        message: 'Debe escoger una opción'
                     }
-                },
+                }
+            },
 
-                departamentoP: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Debe escoger una opción'
-                        }
+            departamentoP: {
+                validators: {
+                    notEmpty: {
+                        message: 'Debe escoger una opción'
                     }
-                },
+                }
+            },
 
-                razonS: {
-                    validators: {
-                        notEmpty: {
-                            message: 'No puedes dejar este campo en blanco'
-                        },
-
-                        stringLength: {
-                            max: 70,
-                            message: 'Este campo no puede tener mas de 70 caracteres'
-                        }
+            razonS: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
                     }
-                },
-
-                id3: {
-                    validators: {
-                        notEmpty: {
-                            message: 'No puedes dejar este campo en blanco'
-                        },
-                        callback: {
-                            callback: function (value, validator, $field) {
-                                if ($('#tipoId').val() === null) {
-                                    return {
-                                        valid: false,
-                                        message: 'Seleccione primero el tipo de documento'
-                                    }
-                                }else if ($('#tipoId').val() === '1') {
-                                    regex = /^\d{8,10}$/;
-                                    if (regex.exec(value)) {
-                                        return {
-                                            valid: true,
-                                            message: 'correcto'
-                                        }
-                                    }
-                                    else {
-                                        return {
-                                            valid: false,
-                                            message: 'Numero de identificacion incorrecto'
-                                        }
-                                    }
-                                }else if($('#tipoId').val() === '2'){
-                                 regex = /^\d{9}$/;
-                                 if (regex.exec(value)) {
-                                    return {
-                                        valid: true,
-                                        message: 'correcto'
-                                    }
-                                }
-                                else {
-                                   return {
-                                    valid: false,
-                                    message: 'Numero de identificacion incorrecto'
-                                }
-                            }
-                        }
-                      //return true;
-                  }
-              }
-          }
-      },
-
-
-      tipoS: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            }
-        }
-    },
-
-    direccionP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+                }
             },
-            stringLength: {
-                max: 30,
-                message: 'Este campo no puede tener mas de 30 caracteres'
-            }
 
-        }
-    },
-
-    telfijoP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+            nit: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    },
+                    regexp: {
+                        regexp: /^\d{10}$/,
+                        message: 'Debes ingresar un número celular valido'
+                    }
+                }
             },
-            regexp: {
-                regexp: /^\d{7}$/,
-                message: 'Debes ingresar un número de telefono valido'
-            }
-        }
-    },
 
-    celularP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+            tipoS: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    }
+                }
             },
-            regexp: {
-                regexp: /^\d{10}$/,
-                message: 'Debes ingresar un número celular valido'
-            }
 
-        }
-    },
-
-    paginawebP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+            tipoR: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    }
+                }
             },
-            stringLength: {
-                max:50,
-                message: 'Este campo no puede tener mas de 50 caracteres'
-            }
-        }
-    },
 
-    cubrimientoP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            }
-        }
-    },
+            phoneP: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    },
+                    regexp: {
+                        regexp: /^\d{10}$/,
+                        message: 'Debes ingresar un número celular valido'
+                    }
 
-    domicilioP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            }
-        }
-    },
-
-    nombreCP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+                }
             },
-            stringLength: {
-                max: 50,
-                message: 'Este campo no puede tener mas de 50 caracteres'
-                
-            }
 
-        }
-    },
-
-    celularCP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+            emailP: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    },
+                    emailAddress: {
+                        message: 'Ingresa una dirección de correo electrónico válida'
+                    }
+                }
             },
-            regexp: {
-                regexp: /^\d{10}$/,
-                message: 'Debes ingresar un número celular valido'
-            }
-
-        }
-    },
-
-    emailCP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
+            passwordP: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    },
+                    identical: {
+                        field: 'confirmPasswordP',
+                        message: 'Las contraseñas no coinciden. ¿Quieres volver a intentarlo?'
+                    },
+                    stringLength: {
+                        message: 'La contraseña debe tener mínimo 6 caracteres',
+                        min: 6
+                    }
+                }
             },
-            emailAddress: {
-                message: 'Ingresa una dirección de correo electrónico válida'
+            confirmPasswordP: {
+                validators: {
+                    notEmpty: {
+                        message: 'No puedes dejar este campo en blanco'
+                    },
+                    identical: {
+                        field: 'passwordP',
+                        message: 'Las contraseñas no coinciden. ¿Quieres volver a intentarlo?'
+                    }
+                }
             }
+
         }
-    },
-
-    descripcionCP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            },
-            stringLength: {
-                message: 'La descripcion no puede tener mas de 200 cara',
-                max: 200
-            }
-        }
-    },
-
-    passwordP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            },
-            stringLength: {
-                message: 'La contraseña debe tener mínimo 6 caracteres',
-                min: 6
-            }
-        }
-    },
-
-
-    confirmPasswordP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            },
-            identical: {
-                field: 'passwordP',
-                message: 'Las contraseñas no coinciden. ¿Quieres volver a intentarlo?'
-            }
-        }
-    }
-
-}
-
-})
 
     });
+
+
+});
