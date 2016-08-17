@@ -182,9 +182,7 @@ $(document).ready(function () {
 
         }
     });
-
-  
-              $('#registroFormP').bootstrapValidator({
+  $('#registroFormP').bootstrapValidator({
 
             message: 'This value is not valid',
             excluded: [':disabled'],
@@ -323,18 +321,6 @@ $(document).ready(function () {
                 message: 'Debes ingresar un número celular valido'
             }
 
-        }
-    },
-
-    paginawebP: {
-        validators: {
-            notEmpty: {
-                message: 'No puedes dejar este campo en blanco'
-            },
-            stringLength: {
-                max:50,
-                message: 'Este campo no puede tener mas de 50 caracteres'
-            }
         }
     },
 
