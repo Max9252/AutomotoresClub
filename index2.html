@@ -1,0 +1,740 @@
+    		<!DOCTYPE html>
+    		<html lang="en">
+    		<head>
+    			<meta charset="UTF-8">
+    			<title>Automotores Club</title>
+    			<meta name="viewport" content="width=device-width, initial-scale=1">
+    			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    			<link rel="stylesheet" href="css/bootstrap.min.css">
+    			<link rel="stylesheet" href="css/estilos.css">
+          <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
+          <link rel="stylesheet" href="css/demo.css">
+          <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+        </head>
+        <body>
+    			<!-- NAVBAR
+          =================== -->
+
+          <nav class="navbar navbar-default navbar-fixed-top">
+           <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">¡Bienvenido al Club!</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Nuestros Servicios</a></li>
+                <li><a href="#">Comprar SOAT</a></li>
+                <li><a href="#">Contactanos</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Inicia Sesiòn</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Carousel<h1>REGISTRATE</h1>
+        ================================================== -->
+        <header id="myCarousel" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for Slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <!-- Set the first background image using inline CSS below. -->
+              <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+              <div class="carousel-caption">
+                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registroA">Registrarse como asociado</a>
+                <a data-target="#registroP" class="btn btn-primary btn-lg" data-toggle="modal">Registrarse como proveedor</a>
+              </div>
+            </div>
+            <div class="item">
+              <!-- Set the second background image using inline CSS below. -->
+              <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+              <div class="carousel-caption">
+
+              </div>
+            </div>
+            <div class="item">
+              <!-- Set the third background image using inline CSS below. -->
+              <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+              <div class="carousel-caption">
+                <h2>Caption 3</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+          </a>
+          <div class="modal fade" id="registroA">
+                        <div class="modal-dialog">
+                            <div class="modal-content" id="modalcontent">
+                                <!--Encabezado de la ventana modal-->
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" area-hidden="true">&times;</button>
+                                    <h2 class="modal-title">Registro Asociado</h2>
+                                </div>
+                                <!--Cuerpo de la ventana modal-->
+                                <div class="modal-body">
+                                    <form id="registroForm" class="form-horizontal" method="POST">
+                                        <h4>Datos del automotor:</h4>
+                                        <div class="form-group">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="input-group" id="gclaseV">
+                                                    <span class="input-group-addon" id="claseVspan">Clase: </span>
+                                                    <label class="sr-only" for="claseV">Clase: </label>
+                                                    <select class="form-control" id="claseV" name="claseV" onchange="formatoPlaca()" required>
+                                                        <option disabled selected>Seleccione una</option>
+                                                        <option value="MOTOCICLETA">Motocicleta</option>
+                                                        <option value="MOTOCARRO">Motocarro</option>
+                                                        <option value="CUATRIMOTO">Cuatrimoto</option>
+                                                        <option disabled>──────────</option>
+                                                        <option value="AUTOMOVIL">Automovil</option>
+                                                        <option value="CAMPERO">Campero</option>
+                                                        <option value="CAMIONETA">Camioneta</option>
+                                                        <option disabled>──────────</option>
+                                                        <option value="MICROBUS">Microbus</option>
+                                                        <option value="BUSETA">Buseta</option>
+                                                        <option value="BUS">Bus</option>
+                                                        <option disabled>──────────</option>
+                                                        <option value="CAMION">Camión</option>
+                                                        <option value="TRACTOCAMION">Tracto Camión</option>
+                                                        <option value="VOLQUETA">Volqueta</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="input-group" id="gplaca">
+                                                    <span class="input-group-addon" id="placaspan">Placa: </span>
+                                                    <label class="sr-only" for="placa">Placa: </label>
+                                                    <input class="form-control" id="placa" type="text" name="placa" style="text-transform:uppercase" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <div class="input-group" id="gmarca">
+                                                    <span class="input-group-addon" id="marcaspan">Marca:</span>
+                                                    <label for="" class="sr-only">Marca</label>
+                                                    <select name="marca" class="form-control" id="marca" onchange="getLinea()">
+                                                        <option disabled selected>Seleccione una</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="lineaspan">Linea:</span>
+                                                    <label for="linea" class="sr-only">Linea</label>
+                                                    <select name="linea" id="linea" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="soatspan">SOAT:</span>
+                                                    <label for="empresaA" class="sr-only">Empresa aseguradora (SOAT)</label>
+                                                    <select name="empresaA" id="empresaA" class="form-control">
+                                                        <option selected disabled>Empresa aseguradora</option>
+                                                        <option value="allianz">Allianz Colombia</option>
+                                                        <option value="mundialdeseguros">Compañía Mundial de Seguros S.A.</option>
+                                                        <option value="laprevisora">La Previsora S.A. Compañía de Seguros</option>
+                                                        <option value="liberty">Liberty Seguros S.A.</option>
+                                                        <option value="qbeseguros">QBE Seguros S.A.</option>
+                                                        <option value="axacolpatria">Axa Colpatria Seguros S.A.</option>
+                                                        <option value="segurosdelestado">Seguros del Estado S.A.</option>
+                                                        <option value="suramericana">Seguros Generales Suramericana S.A.</option>
+                                                        <option value="mapfre">Mapfre Seguros Generales de Colombia S.A.</option>
+                                                        <option value="segurosbolivar">Seguros Bolívar S.A.</option>
+                                                        <option value="solidaria">Aseguradora Solidaria de Colombia Ltda. Entidad Cooperativa</option>
+                                                        <option value="cardif">Cardif Colombia Seguros Generales S.A.</option>
+                                                        <option value="equidad">La Equidad Seguros Generales Organismo Cooperativo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="vigenciaspan">Vigencia:</span>
+                                                    <label for="vigencia" class="sr-only">Vigencia hasta</label>
+                                                    <input type="date" name="vigencia" class="form-control" id="vigencia">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Domicilio del automotor:</h4>
+                                        <div class="form-group">
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="paisspan">País: </span>
+                                                    <label class="sr-only" for="pais">País: </label>
+                                                    <input class="form-control" id="pais" type="text" name="pais" value="Colombia" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="deptospan">Dpto:</span>
+                                                    <label class="sr-only" for="deptos">Departamento: </label>
+                                                    <select class="form-control" id="deptos" name="departamento" onchange="getCiudades()" required>
+                                                        <option disabled selected>Seleccionar</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="input-group">
+
+                                                    <span class="input-group-addon" id="ciudadspan">Ciudad:</span>
+                                                    <label for="ciudad" class="sr-only">Ciudad</label>
+                                                    <select name="ciudad" id="ciudades" class="form-control" onchange="getBarrios()" required>
+                                                        <option disabled selected>Seleccionar</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="barriospan">Barrio:</span>
+                                                    <label for="barrio" class="sr-only">Barrio: </label>
+                                                    <select name="barrio" id="barrio" class="form-control" onchange="getComuna()">
+                                                        <option disabled selected value="">Seleccione un barrio</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="comunaspan">Comuna o localidad:</span>
+                                                    <label for="comuna" class="sr-only">Comuna: </label>
+                                                    <input name="comuna" id="comuna" type="number" class="form-control" value="" placeholder="Comuna 0" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Datos del conductor:</h4>
+                                        <div class="form-group">
+
+                                            <div class="col-xs-12 col-md-5">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="telefonospan">Celular:</span>
+                                                    <label class="sr-only" for="tel">Celular: </label>
+                                                    <input id="tel" class="form-control" type="text" name="phone" placeholder="Celular" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-7">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="emailspan">Email:</span>
+                                                    <label class="sr-only" for="inputEmail">Email: </label>
+                                                    <input class="form-control" name="email" id="email" type="email" placeholder="Correo" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Contraseña para ingresar a la aplicación:</h4>
+                                        <div class="form-group">
+                                            <div class="col-xs-12 col-md-6">
+                                                <label class="sr-only" for="pass">Contraseña: </label>
+                                                <input id="pass" class="form-control" type="password" name="password" placeholder="Contraseña" required>
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-6">
+                                                <label class="sr-only" for="pass">Confirmar Contraseña: </label>
+                                                <input id="passC" class="form-control" type="password" name="confirmPassword" placeholder="Confirmar Contraseña" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <div class="col-xs-12 ">
+                                            <p align="center"><font size="2">Verifique que la información que ha suministrado sea la correcta, ya que los datos errados pueden afectar el registro.</font></p> 
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal" onclick="clearForm()" style="padding-left:30px;padding-right:30px;">Salir</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="center"><font size="2">Al darle continuar, confirma que su información es correcta y acepta las
+                                                    <a href="">
+                                                        <u><strong>politicas y condiciones</strong></u>
+                                                    </a> de AUTOMOTORES CLUB SAS.</font></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-9">
+                                                        <div id="errors">
+                                                            <p>Faltan campos por completar</p>
+                                                        </div>
+                                                    </div>
+                                                     <div class="col-xs-12">
+                                                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="submitForm()">Continuar</button>
+                                                </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="modalRegistroA" data-keyboard="false" data-backdrop="static">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header bg-success">
+                                    <span class="glyphicon glyphicon-ok"></span> REGISTRO COMPLETO         
+                                </div>
+                                <div class="modal-body" >
+                                   <div class="" id="infomsg">
+                                   </div>
+                                   <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal"  onclick="sendInfo()">Deseo Mayor informaciòn</button>
+                                      <button class="btn btn-primary" type="button" data-dismiss="modal" onclick="completeForm()"> Comprendo la información</button>
+                                  </div>
+                              </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+                      </div>
+                  </div>
+
+                  <div class="modal fade" id="modelInfoA" data-keyboard="false" data-backdrop="static">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header bg-info">
+                            <span class="glyphicon glyphicon-envelope"></span> INFORMACION IMPORTANTE         
+                        </div>
+                        <div class="modal-body" >
+                           <div class="" id="sendInfoBody">
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default center-block" data-dismiss="modal"  onclick="completeForm()">Ok</button>
+                          </div>
+                      </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+              </div>
+          </div>
+
+
+
+
+          <div class="modal fade" id="registroP">
+            <div class="modal-dialog">
+                <div class="modal-content" id="modalcontent3">
+                    <!--Encabezado de la ventana modal-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" area-hidden="true">&times;</button>
+                        <h2 class="modal-title">Registro Proveedor</h2>
+                    </div>
+                    <!--Cuerpo de la ventana modal-->
+                    <div class="modal-body">
+                        <h4>Datos del establecimiento:</h4>
+                        <form id="registroFormP" class="form-horizontal" method="POST">
+                            <div class="form-group">
+                                <div class="col-xs-12 col-md-12">
+                                   <div class="input-group">
+                                       <span class="input-group-addon" id="nombrePspan">Nombre:</span>
+                                       <label class="sr-only" for="nombreP">Nombre proveedor: </label>
+                                       <input class="form-control" id="nombreP" type="text" name="nombreP" placeholder="Nombre Comercial" required>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="form-group">
+                            <div class="col-xs-12 col-md-12">
+                               <div class="input-group">
+                                   <span class="input-group-addon" id="razonSspan">Razón social:</span>
+                                   <label class="sr-only" for="razonS">Razón Social: </label>
+                                   <input class="form-control" id="razonS" type="text" name="razonS" placeholder="RUT / C.Cio"  required>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="form-group">
+                        <div class="col-xs-12 col-md-4 col-margin">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="tipoIdspan">Tipo:</span>
+                                <select name="tipoIdentificacion" id="tipoId" class="form-control" onchange="test()">
+                                    <option disabled selected value="">Seleccione</option>
+                                    <option value="1">CC</option>
+                                    <option value="2">NIT</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-margin">
+                            <label class="sr-only" for="id3">NIT: </label>
+                            <input class="form-control" id="id3" type="text" name="id3" placeholder="Numero identificación" required>
+                        </div>
+                        <div class="col-xs-12 col-md-4 ">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="tipoSede">Sede:</span>
+                                <select name="tiposede" id="tipoS" class="form-control" required>
+                                    <option disabled selected value="">Seleccione</option>
+                                    <option value="P">Principal</option>
+                                    <option value="S">Sucursal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12 col-md-4 col-margin">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="paisspan">País: </span>
+                                <label class="sr-only" for="pais">País: </label>
+                                <input class="form-control" id="paisP" type="text" name="paisP" value="Colombia" disabled>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-margin">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="deptospan">Dpto: </span>
+                                <label class="sr-only" for="deptosP">Departamento: </label>
+                                <select class="form-control" id="deptosP" name="departamentoP" onchange="getCiudadesP()" required>
+                                    <option disabled selected>Seleccione</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                           <div class="input-group">
+                            <span class="input-group-addon" id="ciudadspan">Ciudad: </span>
+                            <label class="sr-only" for="ciudadP">Ciudad: </label>
+                            <select name="ciudadP" id="ciudadP" class="form-control" required>
+                                <option disabled selected>Seleccione</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12 col-md-6 col-margin">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="direccionSpan">Dirección:</span>
+                            <label class="sr-only" for="direccionP">Dirección:</label>
+                            <input type="text" name="direccionP" id="direccionP" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="telfijospan">Tel. Fijo:</span>
+                            <label class="sr-only" for="telfijoP">Tel. Fijo:</label>
+                            <input type="text" name="telfijoP" id="telfijoP" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12 col-md-6 col-margin">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="celularPspan">Celular: </span>
+                            <label class="sr-only" for="celularP">celular:</label>
+                            <input type="text" name="celularP" id="celularP" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="input-group">
+                            <span  class="input-group-addon" id="paginaWebSpan">Pagina Web:</span>
+                            <label class="sr-only" for="paginawebP">Pagina Web:</label>
+                            <input type="text" name="paginawebP" id="paginawebP" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12 col-md-6 col-margin">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="cubrimientoSpan">Cubrimiento:</span>
+                            <label class="sr-only" for="cubrimientoP">Cubrimiento:</label>
+                            <select class="form-control" id="cubrimientoP" name="cubrimientoP" required>
+                                <option disabled selected value="">Seleccione</option>
+                                <option value="N">Nacional</option>
+                                <option value="R">Regional</option>
+                                <option value="L">Local</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="domicilioSpan">Domicilios:</span>
+                            <label class="sr-only" for="domicilioP">Domicilios:</label>
+                            <select class="form-control" id="domicilioP" name="domicilioP" required>
+                                <option disabled selected value="">Seleccione</option>
+                                <option value="S">Si</option>
+                                <option value="N">No</option>
+                                <option value="C">Condicionado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <h4>Tipo de proveedor por servicio:</h4>
+
+                <div id="bloqueMsj">
+                    <p>Seleccione al menos uno</p>
+                </div>
+
+                <div class="box" id="boxServicio">
+                    <div class="form-group">
+                        <div class="col-xs-6 insidebox">
+                            <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Combustibles / Lubricantes</label>
+                        </div>
+                        <div class="col-xs-6 insidebox">
+                            <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Llantas / Rines</label>
+                        </div>
+                    </div> 
+
+                    <div class="form-group">
+                      <div class="col-xs-6 insidebox">
+                        <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Mecanica (Rapida / Especializada)</label>
+                    </div>
+                    <div class="col-xs-6 insidebox">
+                        <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Lamina / Pintura</label>
+                    </div>                 
+                </div>
+
+                <div class="form-group">
+                  <div class="col-xs-6 insidebox">
+                    <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Aseo / Accesorios / Lujos</label>
+                </div>
+                <div class="col-xs-6 insidebox">
+                    <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">CDA (Centro Diagnostico Automotor)</label>
+                </div>                 
+            </div>
+            <div class="form-group">
+              <div class="col-xs-6 insidebox">
+                <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Servicios AA / Cojinería</label>
+            </div>
+            <div class="col-xs-6 insidebox">
+                <label class="checkbox-inline"><input type="checkbox" name="tipoServicio" value="">Legales / Financieros</label>
+            </div>                 
+        </div>
+    </div>
+
+
+    <h4>Mercado al cual dirije sus productos y/o servicios:</h4>
+
+    <div id="bloqueMsj2">
+        <p>Seleccione al menos uno</p>
+    </div>
+    <div class="box" id="boxServicio2">
+        <div class="form-group">
+            <div class="col-xs-6 insidebox">
+                <label class="checkbox-inline"><input type="checkbox" name="mercadoObjetivo" value=""> Motocicleta / Motocarro / Cuatrimoto</label>
+            </div>
+            <div class="col-xs-6 insidebox">
+                <label class="checkbox-inline"><input type="checkbox" name="mercadoObjetivo" value=""> Automotovil / Campero / Camioneta</label>
+            </div>
+        </div> 
+
+        <div class="form-group">
+          <div class="col-xs-6 insidebox">
+            <label class="checkbox-inline"><input type="checkbox" name="mercadoObjetivo" value=""> Microbus / Buseta / Bus</label>
+        </div>
+        <div class="col-xs-6 insidebox">
+            <label class="checkbox-inline"><input type="checkbox" name="mercadoObjetivo" value=""> Camión / Tracto Camion / Volqueta</label>
+        </div>                 
+    </div>
+    </div>
+
+    <h4>Persona contacto:</h4>
+
+    <div class="form-group">
+        <div class="col-xs-12 col-md-6 col-margin">
+            <div class="input-group">
+                <span class="input-group-addon" id="nombreCSpan">Nombre:</span>
+                <label class="sr-only" for="nombreCP">Nombre:</label>
+                <input type="text" name="nombreCP" id="nombreCP" class="form-control"  required>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon" id="celularC">Celular:</span>
+                <label class="sr-only" for="celularCP">Nombre:</label>
+                <input type="text" name="celularCP" id="celularCP" class="form-control" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-12">
+            <div class="input-group">
+                <span class="input-group-addon" id="emailC">E-mail:</span>
+                <label class="sr-only" for="emailCP">E-mail:</label>
+                <input type="text" name="emailCP" id="emailCP" class="form-control" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-12">
+            <label class="sr-only" for="descripcionCP">Descripción general de la empresa / Trayectoria / Presencia / Experiencia / Productos y/o servicios que ofrece</label>
+            <textarea class="form-control" rows="3" id="descripcionCP" name="descripcionCP" placeholder="Descripción general de la empresa / Trayectoria / Presencia / Experiencia / Productos y/o servicios que ofrece"></textarea>
+        </div>
+    </div>
+    <h4>Contraseña para ingresar a la aplicación:</h4>
+
+    <div class="form-group">
+        <div class="col-xs-12 col-md-6">
+            <label class="sr-only" for="pass">Contraseña: </label>
+            <input id="pass" class="form-control" type="password" name="passwordP" placeholder="Contraseña" required>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+            <label class="sr-only" for="pass">Confirmar Contraseña: </label>
+            <input id="passC" class="form-control" type="password" name="confirmPasswordP" placeholder="Confirmar Contraseña" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+    <div class="col-xs-12">
+        <p align="center"><font size="2">Verifique que la información que ha suministrado sea la correcta, ya que los datos
+            errados pueden afectar el registro.</font></p>
+            </div>
+            <div class="col-xs-12">
+            <button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal" onclick="clearFormP()" style="padding-left:30px;padding-right:30px;">Salir</button>
+            </div>
+        </div>
+       
+        <div class="form-group">
+    <div class="col-xs-12">
+
+            <p align="center"><font size="2">Al darle continuar, confirma que su información es correcta y acepta las
+                <a href="">
+                    <u><strong>politicas y condiciones</strong></u>
+                </a>de AUTOMOTORES CLUB SAS.</font></p>
+            </div>
+            </div>
+
+        <div class="form-group">
+                <div class="col-xs-12">
+                    <div id="errors2">                  
+                       <p>Faltan campos por completar</p>
+                   </div>
+               </div>
+                <div class="col-xs-12">
+
+                       <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="submitFormP()">Continuar</button>
+    </div>
+           </div>
+
+    </div>
+    </div>
+    </form>
+    </div>
+    <!--Footer de la ventana modal-->
+    </div>
+    </div>
+
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!--Encabezado de la ventana modal-->
+                <div class="modal-header">
+                    <h3 class="modal-title">Ingresa tus credenciales para adquirir el SOAT</h3>
+                </div>
+                <!--Cuerpo de la ventana modal-->
+                <div class="modal-body">
+                    <div class="container">
+                        <form id="registroFormL" class="form-horizontal" method="POST">
+                            <div class="form-group">
+                                <div class="col-md-6">
+
+                                    <label for="userlog" class="control-label">Placa </label>
+                                    <input class="form-control" type="text" name="userlog" id="userlog" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="passlog" class="control-label">Contraseña </label>
+                                    <input class="form-control" type="password" name="passlog" id="passlog" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Cerrar</button>
+                        <button class="btn btn-primary" type="submit">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="modalRegistroP" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <span class="glyphicon glyphicon-ok"></span> REGISTRO COMPLETO         
+        </div>
+        <div class="modal-body" >
+           <div class="" id="infomsg2">
+
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"  onclick="submitInformacionP()">Deseo Mayor informaciòn</button>
+              <button class="btn btn-primary" type="button" data-dismiss="modal" onclick="completeFormP()"> Comprendo la información</button>
+          </div>
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </div>
+    </div>
+
+    <div class="modal fade" id="modelInfoP" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <span class="glyphicon glyphicon-envelope"></span> INFORMACION IMPORTANTE         
+        </div>
+        <div class="modal-body" >
+           <div class="" id="infomsg4">
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default center-block" data-dismiss="modal"  onclick="completeFormP()">Ok</button>
+          </div>
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </div>
+    </div>
+        </header>
+
+  <h2><center>Quienes somos</center></h2>
+
+<div class="container">
+   <div class="col-xs-12 col-md-6">
+       <h3><center>Vision</center></h3>
+       <p align="justify">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </p>
+       
+ </div>
+
+ <div class="col-xs-12 col-md-6">
+       <h3><center>Mision</center></h3>
+  <p align="justify">
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ </p>
+</div>
+</div>
+
+
+
+
+        <script src="js/jquery.js"></script>
+        <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+        <script src="js/bootstrapValidator.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scrolling-nav.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/search.js"></script>
+        <script scr="js/jquery-1.7.1.min.js"></script>
+      </body>
+      </html>
